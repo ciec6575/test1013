@@ -12,12 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var cimZ: UITextField!
     @IBOutlet weak var cimY: UITextField!
-    @IBAction func Action(_ sender: Any)
-    {
-    cimZ.text = "\(Int(cimX.text!)! + Int(cimY.text!)!)"
-    }
     @IBOutlet weak var cimX: UITextField!
+    @IBAction func SUM(_ sender: Any){
+        cimZ.text = "\(Double(cimX.text!)! + Double(cimY.text!)!)"
+    }
+  
+    @IBAction func SUB(_ sender: Any) {
+        cimZ.text = "\(Double(cimX.text!)! - Double(cimY.text!)!)"
+    }
     
+    @IBAction func DIV(_ sender: Any) {
+        cimZ.text = "\(Double(cimX.text!)! / Double(cimY.text!)!)"
+    }
+    
+    @IBAction func NUL(_ sender: Any) {
+        cimZ.text = "\(Double(cimX.text!)! * Double(cimY.text!)!)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
