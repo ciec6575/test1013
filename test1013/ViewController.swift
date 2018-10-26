@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cimZ: UITextField!
+    @IBOutlet weak var cimY: UITextField!
+    @IBAction func Action(_ sender: Any)
+    {
+    cimZ.text = "\(Int(cimX.text!)! + Int(cimY.text!)!)"
+    }
+    @IBOutlet weak var cimX: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
