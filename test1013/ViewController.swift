@@ -9,31 +9,204 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var temp:Double = 0
+    var temp2:Double = 0
+    var operatorFlag = 0
+    var operatorFlag2 = 0
 
-    @IBOutlet weak var cimZ: UITextField!
-    @IBOutlet weak var cimY: UITextField!
-    @IBOutlet weak var cimX: UITextField!
+    @IBOutlet var result: UITextField!
+    
+    @IBOutlet var ac: UIButton!
+    func ac(_ sender: Any) {
+        result.text = ""
+    }
     @IBAction func SUM(_ sender: Any){
-        cimZ.text = "\(Double(cimX.text!)! + Double(cimY.text!)!)"
+       temp = Double(result.text!)!
+        if operatorFlag2 == 0 {
+            temp2 = temp
+        }
+    result.text = ""
+        operatorFlag = 1
+        if operatorFlag2 == 0 {
+        }
+        else
+        {
+            temp2 = temp2 + temp
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
   
     @IBAction func SUB(_ sender: Any) {
-        cimZ.text = "\(Double(cimX.text!)! - Double(cimY.text!)!)"
+        temp = Double(result.text!)!
+        if operatorFlag2 == 0 {
+            temp2 = temp
+        }
+        result.text = ""
+        operatorFlag = 1
+        if operatorFlag2 == 0 {
+        }
+        else
+        {
+            temp2 = temp2 - temp
+        }
+        operatorFlag2 = operatorFlag2 + 1
+        
     }
     
     @IBAction func DIV(_ sender: Any) {
-        cimZ.text = "\(Double(cimX.text!)! / Double(cimY.text!)!)"
+        temp = Double(result.text!)!
+        if operatorFlag2 == 0 {
+            temp2 = temp
+        }
+        result.text = ""
+        operatorFlag = 1
+        if operatorFlag2 == 0 {
+        }
+        else
+        {
+            temp2 = temp2 / temp
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
     
     @IBAction func NUL(_ sender: Any) {
-        cimZ.text = "\(Double(cimX.text!)! * Double(cimY.text!)!)"
+        temp = Double(result.text!)!
+        if operatorFlag2 == 0 {
+            temp2 = temp
+        }
+        result.text = ""
+        operatorFlag = 1
+        if operatorFlag2 == 0 {
+        }
+        else
+        {
+            temp2 = temp2 * temp
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+    
+    
+    
+    
+    @IBAction func number1(_ sender: Any) {
+        result.text = result.text! + "1"
     }
+    
+    
+    @IBAction func number2(_ sender: Any) {
+        result.text = result.text! + "2"
+    }
+    
+    
+    @IBAction func number3(_ sender: Any) {
+         result.text = result.text! + "3"
+    }
+    
+    
+    @IBAction func number4(_ sender: Any) {
+         result.text = result.text! + "4"
+    }
+    
+    
+    @IBAction func number5(_ sender: Any) {
+         result.text = result.text! + "5"
+    }
+    
+    
+    @IBAction func number6(_ sender: Any) {
+         result.text = result.text! + "6"
+    }
+    
+    
+    @IBAction func number7(_ sender: Any) {
+         result.text = result.text! + "7"
+    }
+    
+    @IBAction func number8(_ sender: Any) {
+         result.text = result.text! + "8"
+    }
+    
+    
+    @IBAction func number9(_ sender: Any) {
+         result.text = result.text! + "9"
+    }
+    
 
+    
+    @IBAction func number0(_ sender: Any) {
+        result.text = result.text! + "0"
+    }
+    
+    @IBAction func dot(_ sender: Any) {
+        result.text = result.text! + "."
+    }
+    @IBAction func result(_ sender: Any) {
+        switch operatorFlag {
+        case 1:
+        if operatorFlag2 == 1
+        {
+        temp = temp + Double(result.text!)!
+        result.text = "\(temp)"
+        operatorFlag2 = 0
+        }
+        else {
+            temp2 = temp2 + Double(result.text!)!
+            result.text = "\(temp2)"
+            operatorFlag2 = 0
+            }
+        case 2:
+        if operatorFlag2 == 1
+        {
+        temp = temp - Double(result.text!)!
+        result.text = "\(temp)"
+        operatorFlag2 = 0
+        }
+        else{
+            temp2 = temp2 - Double(result.text!)!
+            result.text = "\(temp)"
+            operatorFlag2 = 0
+            }
+        case 3:
+            if operatorFlag2 == 1
+            {
+                temp = temp * Double(result.text!)!
+                result.text = "\(temp)"
+                operatorFlag2 = 0
+            }
+            else{
+                temp2 = temp2 * Double(result.text!)!
+                result.text = "\(temp)"
+                operatorFlag2 = 0
+            }
+        case 4:
+            if operatorFlag2 == 1
+            {
+                temp = temp / Double(result.text!)!
+                result.text = "\(temp)"
+                operatorFlag2 = 0
+            }
+            else{
+                temp2 = temp2 / Double(result.text!)!
+                result.text = "\(temp)"
+                operatorFlag2 = 0
+            }
+        default: break
+    
 
+    
+        func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+            }
+        // Do any additional setup after loading the view, typically from a nib.
+        }
+        
 }
+}
+
+
 
