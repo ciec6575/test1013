@@ -196,6 +196,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="ac"/>
                                 <connections>
+                                    <action selector="ac:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bsm-rp-ZDI"/>
                                     <action selector="result:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idt-GO-9oJ"/>
                                 </connections>
                             </button>
@@ -204,7 +205,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ac" destination="sTx-aw-MLw" id="pKm-Sl-gen"/>
                         <outlet property="result" destination="g6y-qo-Hbc" id="WC3-LW-oft"/>
                     </connections>
                 </viewController>

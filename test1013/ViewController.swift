@@ -16,10 +16,12 @@ class ViewController: UIViewController {
 
     @IBOutlet var result: UITextField!
     
-    @IBOutlet var ac: UIButton!
-    func ac(_ sender: Any) {
+    @IBAction func ac(_ sender: Any) {
         result.text = ""
-    }
+        operatorFlag2 = 0
+        }
+
+    
     @IBAction func SUM(_ sender: Any){
        temp = Double(result.text!)!
         if operatorFlag2 == 0 {
@@ -193,10 +195,12 @@ class ViewController: UIViewController {
                 operatorFlag2 = 0
             }
         default: break
+        }
+    }
     
 
     
-        func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         
         
@@ -205,8 +209,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         }
         
-}
-}
+
 
 
 
