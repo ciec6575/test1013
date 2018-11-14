@@ -13,14 +13,15 @@ class ViewController: UIViewController {
     var temp2:Double = 0
     var operatorFlag = 0
     var operatorFlag2 = 0
+    
 
     @IBOutlet var result: UITextField!
     
     @IBAction func ac(_ sender: Any) {
         result.text = ""
-        operatorFlag2 = 0
-        }
+}
 
+    
     
     @IBAction func SUM(_ sender: Any){
        temp = Double(result.text!)!
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
             temp2 = temp
         }
         result.text = ""
-        operatorFlag = 1
+        operatorFlag = 2
         if operatorFlag2 == 0 {
         }
         else
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
             temp2 = temp
         }
         result.text = ""
-        operatorFlag = 1
+        operatorFlag = 4
         if operatorFlag2 == 0 {
         }
         else
@@ -77,7 +78,7 @@ class ViewController: UIViewController {
             temp2 = temp
         }
         result.text = ""
-        operatorFlag = 1
+        operatorFlag = 3
         if operatorFlag2 == 0 {
         }
         else
@@ -88,6 +89,11 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func 根号(_ sender: Any) {
+        temp = Double(result.text!)!
+        temp = sqrt(temp)
+        result.text = "\(temp)"
+    }
     
     
     
@@ -135,10 +141,21 @@ class ViewController: UIViewController {
          result.text = result.text! + "9"
     }
     
-
     
     @IBAction func number0(_ sender: Any) {
         result.text = result.text! + "0"
+    }
+    
+    
+    @IBAction func 负号(_ sender: Any) {
+        temp = Double(result.text!)!
+        operatorFlag2 = operatorFlag + 1
+        temp = temp * -1
+        result.text = "\(temp)"
+    }
+    
+    @IBAction func number00(_ sender: Any) {
+      result.text = result.text! + "00"
     }
     
     @IBAction func dot(_ sender: Any) {
@@ -194,6 +211,7 @@ class ViewController: UIViewController {
                 result.text = "\(temp)"
                 operatorFlag2 = 0
             }
+       
         default: break
         }
     }
