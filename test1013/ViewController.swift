@@ -149,7 +149,6 @@ class ViewController: UIViewController {
     
     @IBAction func 负号(_ sender: Any) {
         temp = Double(result.text!)!
-        operatorFlag2 = operatorFlag + 1
         temp = temp * -1
         result.text = "\(temp)"
     }
@@ -167,48 +166,48 @@ class ViewController: UIViewController {
         if operatorFlag2 == 1
         {
         temp = temp + Double(result.text!)!
-        result.text = "\(temp)"
+            result.text = String(format:"%.9f",temp)
         operatorFlag2 = 0
         }
         else {
             temp2 = temp2 + Double(result.text!)!
-            result.text = "\(temp2)"
+            result.text = String(format:"%.9f",temp2)
             operatorFlag2 = 0
             }
         case 2:
         if operatorFlag2 == 1
         {
         temp = temp - Double(result.text!)!
-        result.text = "\(temp)"
+        result.text = String(format:"%.9f",temp)
         operatorFlag2 = 0
         }
         else{
             temp2 = temp2 - Double(result.text!)!
-            result.text = "\(temp)"
+            result.text = String(format:"%.9f",temp2)
             operatorFlag2 = 0
             }
         case 3:
             if operatorFlag2 == 1
             {
                 temp = temp * Double(result.text!)!
-                result.text = "\(temp)"
+                result.text = String(format:"%.9f",temp)
                 operatorFlag2 = 0
             }
             else{
                 temp2 = temp2 * Double(result.text!)!
-                result.text = "\(temp)"
+                result.text = String(format:"%.9f",temp2)
                 operatorFlag2 = 0
             }
         case 4:
             if operatorFlag2 == 1
             {
                 temp = temp / Double(result.text!)!
-                result.text = "\(temp)"
+                result.text = String(format:"%.9f",temp)
                 operatorFlag2 = 0
             }
             else{
                 temp2 = temp2 / Double(result.text!)!
-                result.text = "\(temp)"
+                result.text = String(format:"%.9f",temp2)
                 operatorFlag2 = 0
             }
        
@@ -216,8 +215,7 @@ class ViewController: UIViewController {
         }
     }
     
-
-    
+  
         override func viewDidLoad() {
         super.viewDidLoad()
         
