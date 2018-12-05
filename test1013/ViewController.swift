@@ -156,6 +156,9 @@ class ViewController: UIViewController {
     @IBAction func number00(_ sender: Any) {
       result.text = result.text! + "00"
     }
+    @IBAction func 中国(_ sender: UIButton) {
+         result.text = result.text! + "521❤️中国"
+    }
     
     @IBAction func dot(_ sender: Any) {
         result.text = result.text! + "."
