@@ -156,10 +156,6 @@ class ViewController: UIViewController {
     @IBAction func number00(_ sender: Any) {
       result.text = result.text! + "00"
     }
-    @IBAction func 中国(_ sender: UIButton) {
-         result.text = result.text! + "521❤️中国"
-    }
-    
     @IBAction func dot(_ sender: Any) {
         result.text = result.text! + "."
     }
@@ -201,7 +197,7 @@ class ViewController: UIViewController {
                 result.text = String(format:"%.9f",temp2)
                 operatorFlag2 = 0
             }
-        case 4:
+        case 4:     
             if operatorFlag2 == 1
             {
                 temp = temp / Double(result.text!)!
@@ -226,7 +222,10 @@ class ViewController: UIViewController {
         
             }
         // Do any additional setup after loading the view, typically from a nib.
+    
+    
         }
+
         
 
 
